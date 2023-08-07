@@ -1,0 +1,17 @@
+run = "hugo server --bind=0.0.0.0 --port=8080"
+hidden = ["main"]
+
+[languages.go]
+pattern = "**/*.go"
+
+[languages.go.languageServer]
+start = "gopls"
+
+[nix]
+channel = "stable-22_11"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["sh", "-c", "Hugo —bind=0.0.0.0 —port=8080"]
